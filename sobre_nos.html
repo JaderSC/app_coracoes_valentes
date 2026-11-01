@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fraternidade Corações Valentes</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+</head>
+
+<body class="flex flex-col h-full bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
+
+
+    <!-- NAVBAR -->
+    <nav class="bg-blue-700 border-b border-gray-200 fixed top-0 w-full z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 font-bold text-xl text-indigo-100">
+                    <img src="./img/logo.png" alt="Logo do Site" class="h-20 w-auto">
+                </div>
+
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex space-x-8 font-medium">
+
+
+                    <a href="/index.html" class="text-gray-100 hover:text-indigo-200 transition">Início</a>
+                    <a href="/videos.html" class="text-gray-100 hover:text-indigo-200 transition">Nossas Atividades</a>
+                    <a href="/endereco.html" class="text-gray-100 hover:text-indigo-200 transition">Endereço</a>
+                    <a href="/sobre_nos.html" class="text-gray-100 hover:text-indigo-200 transition">Sobre Nós</a>
+                </div>
+
+                <!-- Botão Hamburger Mobile -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-100 hover:text-indigo-600 focus:outline-none p-2"
+                        aria-label="Abrir menu">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MENU MOBILE LATERAL (Sidebar com Blur) -->
+    <!-- Backdrop (Fundo escurecido) -->
+    <div id="sidebar-backdrop"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300"></div>
+
+    <!-- Painel Lateral -->
+    <aside id="sidebar"
+        class="fixed top-0 right-0 bottom-0 w-64 bg-white/90 backdrop-blur-md z-50 transform translate-x-full transition-transform duration-300 ease-in-out border-l border-gray-200 p-6 flex flex-col">
+        <!-- Botão Fechar -->
+        <div class="flex justify-end mb-8">
+            <button id="close-btn" class="text-gray-600 hover:text-indigo-600 focus:outline-none p-2"
+                aria-label="Fechar menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <!-- Links Mobile -->
+        <nav class="flex flex-col space-y-6 font-medium text-lg">
+            <a href="/index.html" class="text-gray-600 hover:text-indigo-600 transition">Início</a>
+            <a href="#" class="text-gray-600 hover:text-indigo-600 transition">Nossas Atividades</a>
+            <a href="/endereco.html" class="text-gray-600 hover:text-indigo-600 transition">Endereço</a>
+            <a href="/sobre_nos.html" class="text-gray-600 hover:text-indigo-600 transition">Sobre Nós</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN (Centralizado Horizontal e Vertical) -->
+    <main class="flex-grow flex items-center justify-center pt-16 pb-12 px-4">
+
+      <!-- Seção: Sobre Mim -->
+    <section id="sobre-mim" class="grid md:grid-cols-2 gap-8 items-center">
+      <!-- Imagem/Avatar (Substitua a URL da imagem) -->
+      <div class="flex justify-center md:justify-start">
+        <img src="./img/foto_coracoes_valentes.webp" 
+             alt="Foto de Perfil" 
+             class="rounded-2xl shadow-xl object-cover w-full max-w-md h-80">
+      </div>
+      <!-- Texto -->
+      <div class="space-y-4">
+        <h2 class="text-3xl font-bold text-gray-900 border-b-4 border-blue-600 pb-2 inline-block">Sobre a Fraternidade</h2>
+
+        <p class="text-gray-600 leading-relaxed pt-2">
+       
+        </p>
+
+        <h2 class="text-3xl font-bold text-gray-900 border-b-4 border-blue-600 pb-2 inline-block">Fundadoras</h2>
+
+        <p class="text-gray-600 leading-relaxed pt-2">
+         Rosangela Estrela (mãe do Raphael) e Janaína Aparecida Arruda (mãe da Isadora e do Benjamim).
+        </p>
+
+         <h2 class="text-3xl font-bold text-gray-900 border-b-4 border-blue-600 pb-2 inline-block">Missão</h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          Oferecer escuta, orientação, acolhimento e suporte emocional ("cuidando de quem cuida"), além de promover oficinas, terapias, avaliação neuropsicológica e bazares.
+        </p>
+      </div>
+    </section>
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-700 border-t border-gray-200 py-6 text-center text-sm text-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 Minha Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT INTERATIVO -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const sidebar = document.getElementById('sidebar');
+        const backdrop = document.getElementById('sidebar-backdrop');
+
+        function openMenu() {
+            // Exibe o backdrop tirando o 'hidden' e aplicando opacidade com delay
+            backdrop.classList.remove('hidden');
+            setTimeout(() => backdrop.classList.remove('opacity-0'), 10);
+
+            // Move a sidebar para dentro da tela
+            sidebar.classList.remove('translate-x-full');
+
+            // Evita scroll no fundo enquanto o menu está aberto
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeMenu() {
+            // Esconde o backdrop com transição suave
+            backdrop.classList.add('opacity-0');
+            setTimeout(() => backdrop.classList.add('hidden'), 300);
+
+            // Move a sidebar para fora da tela
+            sidebar.classList.add('translate-x-full');
+
+            // Restaura o scroll da página
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // Eventos
+        menuBtn.addEventListener('click', openMenu);
+        closeBtn.addEventListener('click', closeMenu);
+        backdrop.addEventListener('click', closeMenu); // Fecha ao clicar fora do menu
+    </script>
+</body>
+
+</html>
